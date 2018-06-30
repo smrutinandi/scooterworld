@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title></title>
+	<script type="text/javascript">
+		$(document).ready(function() {
+  $("#fade_controls").on('click', 'a', function() {
+
+    $("#fade img").removeClass("opaque");
+    var newImage = $(this).index();
+    $("#fade img").eq(newImage).addClass("opaque");
+
+    $("#fadetxt div").removeClass("opaque");
+    var newText = $(this).index();
+    $("#fadetxt div").eq(newText).addClass("opaque");
+
+    $("#fade_controls a").removeClass("hvr-glow-selected");
+    $(this).addClass("hvr-glow-selected");
+  });
+});
+
+$(document).ready(function() {
+	$("#right_arrow").click(function(){
+    	var nextSlide = $('.slidep.opaque, .slidei.opaque').next();
+    	var nextControl = $('.slidec.hvr-glow-selected').next();
+        if($(".slidei.opaque").is($(".slidei:last"))) {
+        	$('.slidep.opaque, .slidei.opaque').removeClass("opaque");
+        	$('.slidec.hvr-glow-selected').removeClass("hvr-glow-selected");
+        	$('.slidep:first, .slidei:first').addClass("opaque");
+        	$('.slidec:first').addClass("hvr-glow-selected");
+        }
+        else {
+        	$('.slidep.opaque, .slidei.opaque').removeClass("opaque");
+        	$('.slidec.hvr-glow-selected').removeClass("hvr-glow-selected");
+        	$(nextSlide).addClass("opaque");
+        	$(nextControl).addClass("hvr-glow-selected");
+        }
+    });
+});
+
+$(document).ready(function() {
+	$("#left_arrow").click(function(){
+    	var prevSlide = $('.slidep.opaque, .slidei.opaque').prev();
+    	var prevControl = $('.slidec.hvr-glow-selected').prev();
+        if($(".slidei.opaque").is($(".slidei:first"))) {
+        	$('.slidep.opaque, .slidei.opaque').removeClass("opaque");
+        	$('.slidec.hvr-glow-selected').removeClass("hvr-glow-selected");
+        	$('.slidep:last, .slidei:last').addClass("opaque");
+        	$('.slidec:last').addClass("hvr-glow-selected");
+        }
+        else {
+        	$('.slidep.opaque, .slidei.opaque').removeClass("opaque");
+        	$('.slidec.hvr-glow-selected').removeClass("hvr-glow-selected");
+        	$(prevSlide).addClass("opaque");
+        	$(prevControl).addClass("hvr-glow-selected");
+        }
+    });
+});
+	</script>
+	<style type="text/css">
+		#fadebox {
+	margin: 0 auto;
+	text-align:center;
+	z-index: 1;
+}
+
+img#left_arrow {
+	width: 30px;
+	position: relative;
+    margin-bottom: 150px;
+    margin-right: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+img#left_arrow:hover {
+	opacity: 0.6;
+}
+
+img#right_arrow {
+	width: 30px;
+	position: relative;
+    margin-bottom: 150px;
+    margin-left: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+img#right_arrow:hover {
+	opacity: 0.6;
+}
+
+p#fade_controls {
+  text-align:center;
+  z-index: 1;
+}
+#fade_controls a {
+/*	margin: .4em;*/
+	padding: .7em;
+	cursor: pointer;
+	background: #e1e1e1;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: #666;
+    width: 80px;
+}
+#fade_controls a.hvr-glow-selected {
+  background: none;
+}
+
+#fade_controls a.hvr-glow {
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background;
+  transition-property: background;
+  box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px rgba(0, 0, 0, 0);
+}
+
+#fade_controls a.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+  background: none;
+}
+
+
+#fade {
+  position:relative;
+  height:340px;
+  width:500px;
+  margin:0 auto 10px;
+  display: inline-block;
+}
+#fade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity:0;
+  width:500px;
+  height:340px;
+  -webkit-box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+  -moz-box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+  box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+}
+#fade img.opaque {
+  opacity:1;
+  width:500px;
+  height:340px;
+  -webkit-box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+  -moz-box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+  box-shadow: 0px 1px 30px 0px rgba(176,176,176,1);
+}
+
+#fadetxt {
+  position:relative;
+  height:340px;
+  width:300px;
+  margin:0 15px 0 0;
+  display: inline-block;
+}
+#fadetxt h2 {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity:0;
+  font-size: 28px;
+  font-weight: 300; 
+  color: #333;
+  text-align:left;
+}
+#fadetxt div.opaque > h2 {
+  opacity:1;
+  font-size: 28px;
+  font-weight: 300; 
+  color: #333;
+  text-align:left;
+}
+#fadetxt p {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity:0;
+  padding-top: 40px;
+  text-align:left;
+  font-size: 16px;
+}
+#fadetxt div.opaque > p {
+  opacity:1;
+  paddin-top: 40px;
+  text-align:left;
+    font-size: 16px;
+}
+
+	</style>
+</head>
+<body>
+<div id="fadebox">
+	<img id="left_arrow" src="http://www.clker.com/cliparts/Z/n/k/Z/y/j/left-arrow-gray-hi.png" />
+	<div id="fadetxt">
+	  <div class='slidep opaque'><h2>Californian Monk Seal</h2><p>Bacon ipsum dolor amet corned beef drumstick jowl boudin kevin rump bresaola pork belly pig.<br><br>Fatback pork belly pork chop drumstick spare ribs beef ribs. Corned beef rump cow jowl shoulder meatloaf ball tip tri-tip cupim pastrami prosciutto pork sirloin. Turkey biltong bacon, filet mignon meatball shankle frankfurter shoulder.<br><br>Bacon ipsum dolor amet corned beef drumstick jowl boudin kevin rump bresaola pork belly pig.</p></div>
+	  <div class='slidep'><h2>Leopard Seal</h2><p>Tri-tip hamburger pork belly landjaeger andouille tenderloin. Turkey biltong bacon, filet mignon meatball shankle frankfurter shoulder.<br><br>Picanha tenderloin pork shank alcatra meatball pork chop t-bone bacon corned beef hamburger short loin ground round.<br><br>Bacon ipsum dolor amet corned beef drumstick jowl boudin kevin rump bresaola pork belly pig.</p></div>
+	   <div class='slidep'><h2>New Zealand Fur Seals</h2><p>Ribeye pork belly pancetta hamburger, ham prosciutto pork loin flank beef chicken. Boudin t-bone turkey pastrami chuck. Biltong pork loin alcatra ham hock shank landjaeger.<br><br>Alcatra hamburger meatball pork venison bresaola ground round landjaeger picanha ball tip beef short loin frankfurter.Tri-tip hamburger pork belly landjaeger andouille tenderloin. Turkey biltong bacon, filet mignon meatball shankle frankfurter shoulder.</p></div>
+	   <div class='slidep'><h2>Canadian Baby Seal</h2><p>Jerky sausage strip steak bresaola, pork cow capicola. Pork chop pork boudin tri-tip, frankfurter short loin leberkas capicola kevin shank shoulder rump strip steak cupim jerky.<br><br>Strip steak pig porchetta capicola, kielbasa tenderloin pastrami biltong filet mignon pork belly pancetta shankle beef ribs tail bresaola.</p></div>
+	</div>
+	<div id="fade">
+	  <img class='slidei opaque' id="#displayed" src="http://i.telegraph.co.uk/multimedia/archive/01661/seal_1661793c.jpg" />
+	  <img class='slidei' src="http://i.telegraph.co.uk/multimedia/archive/01212/seal_1212980c.jpg" />
+	  <img class='slidei' src="http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/fur-seal_531_600x450.jpg" />
+	  <img class='slidei' src="http://myweb.tiscali.co.uk/ladycroft/seal2.jpg" />
+	</div>
+	<img id="right_arrow" src="http://guidelinesandprinciples.org/assessment/upload/surveys/117344/images/arrow_right_grey.png" />
+</div>	
+	<p id="fade_controls">
+	  <a class="slidec hvr-glow hvr-glow-selected">First Seal</a>
+	  <a class="slidec hvr-glow">Second Seal</a>
+	  <a class="slidec hvr-glow">Third Seal</a>
+	  <a class="slidec hvr-glow">Fourth Seal</a>
+	</p>
+
+</body>
+</html>

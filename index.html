@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="carousel_custom.css">
+	<script type="text/javascript" src="carousel_custom.js"></script>
+
+
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+    			//$("#myModal").modal();
+			});
+	</script>
+	<title>SCOOTYWORLD.com</title>
+	<style type="text/css">
+		.input-group
+		{
+			width: 100%;
+		}
+		.flex-container {
+			  display: flex;
+			  flex-wrap: nowrap;
+			  
+			  background-color: blue;
+			}
+
+.flex-container > div {
+		  background-color: #f1f1f1;
+		  width: 500px;
+		  margin: 10px;
+		  text-align: center;
+		  line-height: 75px;
+		  font-size: 30px;
+		  height: 300px;
+}
+#img1 {
+  position: relative;
+  
+}
+#img2 {
+  position: relative;
+  
+}
+#img3 {
+  position: relative;
+  
+}
+#img4 {
+  position: relative;
+  
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+#img1:hover .overlay {
+  opacity: 1;
+}
+#img2:hover .overlay {
+  opacity: 1;
+  
+}
+#img3:hover .overlay {
+  opacity: 1;
+  
+}
+#img4:hover .overlay {
+  opacity: 1;
+  
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+    align:center;
+}
+
+	</style>
+</head>
+<body>
+ <nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand" style="padding: 0px"><img src="assets/images/logo.png" height="50px" width="50px"  ></a>
+			</div>
+			
+			<ul class=" nav navbar-nav navbar-right">
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Sign up</a></li>
+			</ul>
+		</div><!--container-fluid-->
+	</nav><!---navbar closes-->	
+
+ <div class="container">
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" align="center" style="color: blue">PUJA OFFERS</h4>
+        </div>
+        <div class="modal-body">
+        	<a href="offer.html">
+          		<img src="assets/images/1.jpg" width="550px">
+      		</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<div class="container-fluid" >
+		 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: #ffffff;">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox" style="max-height:500px;" >
+			<div class="item active">
+			  <center>
+			  	<img class="img-fluid" src="assets/images/sc1.png" width="auto" height ="500px"alt="Flower">
+			  </center>
+			</div>
+
+			<div class="item">
+				<center>
+			 <img class="img-fluid" src="assets/images/sc4.jpg" width="auto" alt="Flower">
+				</center>
+			</div>
+
+			<div class="item">
+			  <center>
+			  <img class="img-fluid" src="assets/images/sc2.png" width="auto" height="500px;" alt="Flower">
+				</center>
+			</div>
+
+			<div class="item">
+			  <center>
+			  <img class="img-fluid" src="assets/images/sc4.png" width="auto" height="500pxs" alt="Flower">
+				</center>
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+<!---carousal end-->
+<!--fafa item-->
+  
+
+<nav class="navbar">
+  <div class="container">
+    <form class="navbar-form " action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><h4>News and reviews</h4></a></li>
+      <li><a href="#"><h4>New Cars</h4></a></li>
+      <li><a href="#"><h4>New Bikes</h4></a></li>
+      <li><a href="#"><h4>Scooters</h4></a></li>
+      <li><a href="#"><h4>Used Cars</h4></a></li>
+      <li><a href="#"><h4>More</h4></a></li>
+
+    </ul>
+    
+  </div>
+</nav>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <div class="item">
+            <div class="col-xs-4" id="img2"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive">
+            	<div class="overlay"><h4>Price:Rs60000
+			  	</h4>
+			  	<h4>Brand:PEP</h4>
+			  	</div>
+			  </a></div>
+          <div class="col-xs-4" id="img2"><a href="#1"><img src="assets/images/tr.png" class="img-responsive">
+          	<div class="overlay"><h4>Price:Rs80000
+			  	</h4>
+			  	<h4>Brand:suzaki</h4>
+			  	</div>
+          </a></div>
+          <div class="col-xs-4" id="img3"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive">
+          	<div class="overlay"><h4>Price:Rs90000
+			  	</h4>
+			  	<h4>Brand:Hero </h4>
+			  	</div>
+          </a></div></div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div></div>
+          <div class="item active">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div></div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div></div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div></div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a></div><div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div></div>
+          <!-- add  more items here -->
+          <!-- Example item start:  -->
+          
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div>
+          <div class="col-xs-4"><a href="#1"><img src="assets/images/tr.png" class="img-responsive"></a>
+          </div><div class="col-xs-4"><a href="#1"><img src="assets/images/tr1.png" class="img-responsive"></a></div></div>
+          
+          <!--  Example item end -->
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  	<img src="assets/images/car_1.jpg" class="img-responsive"> 
+  </div>
+</div>
+<br>
+<div class="container">
+  <h1>Lastes video</h1>
+	<div class="row">
+	<div class="col-sm-3 well"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/gbbkNv8OiDk?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		
+	</div>
+	<div class="col-sm-3 well">
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/wIv1GZojPrE?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div class="col-sm-3 well">
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gATsqmdVrOw?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div class="col-sm-3 well">
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/a6Ss_d25nA4?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	</div>
+  </div>
+
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+      event: "mouseover"
+    });
+  } );
+  </script>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Latest</a></li>
+      <li><a href="#tabs-2">Popular</a></li>
+      <li><a href="#tabs-3">Fashionable</a></li>
+    </ul>
+    <div id="tabs-1">
+        <div class="row">
+            <div class="col-sm-3 well"><img src="assets/images/jq.png" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq1.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq3.png" height="200px" width="300px"></div>
+        </div>
+    </div>
+    <div id="tabs-2">
+      <div class="row">
+            <div class="col-sm-3 well"><img src="assets/images/jq.png" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq1.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq3.png" height="200px" width="300px"></div>
+        </div>
+    </div>
+    <div id="tabs-3">
+      <div class="row">
+            <div class="col-sm-3 well"><img src="assets/images/jq.png" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq1.jpg" height="200px" width="300px"></div>
+            <div class="col-sm-3 well"><img src="assets/images/jq3.png" height="200px" width="300px"></div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <script src="jqueryui/external/jquery/jquery.js"></script>
+  <script src="jqueryui/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>
